@@ -1,11 +1,22 @@
 .welcome {
+  height: 500px;
   background-color: @green;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) , url(../../img/index-background-desktop.jpg);
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  @media (min-width: @tablet-width) {
+    color: @black;
+    background-image: none;
+    background-color: @white;
+  }
 }
 
 .welcome__title {
   color: @white;
+  @media (min-width: @tablet-width) {
+   color: @black;
+  }
 }
 
 .welcome__slogan {
@@ -15,6 +26,11 @@
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+   }
 }
 
 .welcome__button {

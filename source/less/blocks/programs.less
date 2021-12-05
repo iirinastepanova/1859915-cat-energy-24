@@ -1,5 +1,18 @@
+.programs {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .programs__item {
+  width: 100%;
+  color: @black;
   background-color: @concrete;
+  @media (min-width: @desktop-width) {
+    width: 47%;
+  }
 }
 
 .programs__title {
@@ -9,6 +22,10 @@
   font-weight: 400;
   color: @black;
   text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__link {
@@ -19,4 +36,8 @@
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
