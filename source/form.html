@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img src="../source/img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
+        <img src="img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
       </a>
       <nav class="navigation">
         <button class="navigation__toggle" type="button">
@@ -15,14 +16,14 @@
         </button>
         <div class="navigation__wrapper">
           <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
-          <a class="navigation__link" href="#">Каталог продукции</a>
-          <a class="navigation__link" href="#">Подбор программы</a>
+          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          <a class="navigation__link" href="form.html">Подбор программы</a>
         </div>
       </nav>
     </header>
-    <main class="">
-      <h1 class="">Подбор программы</h1>
-      <p class="">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <main class="main program-selection">
+      <h1 class="program-selection__title title">Подбор программы</h1>
+      <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="form__group">
           <label class="form__label">
@@ -40,15 +41,15 @@
         </fieldset>
         <fieldset class="form__group goal">
           <legend class="form__legend visually-hidden">Цель программы.</legend>
-          <label class="form__label">
+          <label class="form__label form__label--radio">
             <input class="form__input goal__input" type="radio" name="goal" value="weight-loss"checked>
             Похудение
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--radio">
             <input class="form__input goal__input" type="radio" name="goal" value="weight-gain" >
             Набор массы
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--radio">
             <input class="form__input goal__input" type="radio" name="goal" value="need-help">
             Не знаю (Нужен ваш совет)
           </label>
@@ -69,19 +70,19 @@
         </textarea>
         <fieldset class="form__group optional">
           <legend class="form__legend">Дополнительно</legend>
-          <label class="form__label">
+          <label class="form__label form__label--check">
             <input class="form__input optional__input" type="checkbox" name="sweetener" checked>
             Сахарозаменитель
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--check">
             <input class="form__input optional__input" type="checkbox" name="water" >
             Питьевая вода
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--check">
             <input class="form__input optional__input" type="checkbox" name="milk">
             Молоко
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--check">
             <input class="form__input optional__input" type="checkbox" name="vitamins">
             Витамины
           </label>
@@ -99,7 +100,7 @@
     <footer class="footer">
       <div class="footer__logo-wrapper">
         <a class="footer__logo" href="index.html">
-          <img src="../source/img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
+          <img src="img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
         </a>
       </div>
       <section class="footer__social social">
