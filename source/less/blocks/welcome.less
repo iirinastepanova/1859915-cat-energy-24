@@ -1,19 +1,37 @@
 .welcome {
   height: 500px;
+  margin-bottom: 20px;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: @green;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) , url(../../img/index-background-desktop.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   @media (min-width: @tablet-width) {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: @black;
     background-image: none;
     background-color: @white;
   }
 }
 
+.welcome__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
 .welcome__title {
+  width: 250px;
+  margin: 0;
+  text-align: center;
   color: @white;
+  .title;
   @media (min-width: @tablet-width) {
    color: @black;
   }
@@ -34,6 +52,9 @@
 }
 
 .welcome__button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 20px;
   font-size: 14px;
   line-height: 18px;
 }
