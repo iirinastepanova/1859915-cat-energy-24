@@ -17,13 +17,19 @@
     background-image: none;
     background-color: @white;
   }
+  @media (min-width: @desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
 }
 
 .welcome__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  @media (min-width: @tablet-width) {
+    align-items: stretch;
+  }
 }
 
 .welcome__title {
@@ -33,7 +39,9 @@
   color: @white;
   .title;
   @media (min-width: @tablet-width) {
-   color: @black;
+    width: 415px;
+    text-align: left;
+    color: @black;
   }
 }
 
@@ -57,4 +65,8 @@
   padding: 7px 20px;
   font-size: 14px;
   line-height: 18px;
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 14px 26px;
+  }
 }

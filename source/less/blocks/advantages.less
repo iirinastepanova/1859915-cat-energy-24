@@ -1,3 +1,16 @@
+.advantages {
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
 .advantages__title {
   .title;
 }
@@ -16,3 +29,17 @@
     grid-template-columns: repeat(4 , 1fr);
   }
 }
+.advantages__item {
+  position: relative;
+  margin-bottom: 26px;
+  padding-left: 80px;
+}
+.advantages__item::before {
+  position: absolute;
+  left: 0px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+  }

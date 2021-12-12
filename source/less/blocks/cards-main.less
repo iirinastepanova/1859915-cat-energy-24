@@ -1,14 +1,20 @@
 .cards-main {
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 84px 60px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 84px 60px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
 }
