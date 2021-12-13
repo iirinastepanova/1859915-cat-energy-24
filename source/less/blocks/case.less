@@ -1,5 +1,52 @@
 .case {
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
   background-color: @concrete-dark;
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+}
+
+.case__title {
+  .title
+}
+.case__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text"
+    "stats"
+    "price"
+    "slider" ;
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "text text"
+      "stats price"
+      "slider slider" ;
+    }
+    @media (min-width: @desktop-width) {
+      grid-template-areas:
+      "text slider"
+      "stats slider"
+      "price slider" ;
+    }
+}
+
+.case__text {
+  grid-area: text;
+}
+
+.case__stats {
+  grid-area: stats;
 }
 
 .case__result {
@@ -7,22 +54,39 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .case__description {
+  margin-left: 0;
   font-family:  Arial, sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: @grey-light;
   text-transform: lowercase;
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .case__price {
+  grid-area: price;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: @black;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.case__slider {
+  grid-area: slider;
 }
 
 .case__visualize-time {
@@ -32,4 +96,8 @@
   font-weight: 400;
   color: @black;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

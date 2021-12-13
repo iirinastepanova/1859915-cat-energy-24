@@ -1,5 +1,22 @@
 
 .header {
+  color: @black;
   background-color: @white;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 140px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
+.header__logo {
+  height: 66px;
+}

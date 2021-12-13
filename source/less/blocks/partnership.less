@@ -1,5 +1,22 @@
 .partnership {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-bottom: 26px;
+  padding-left: 20px;
   background-color: @concrete;
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    background-color: @white;
+  }
 }
 .partnership--index {
   background-color: @white;

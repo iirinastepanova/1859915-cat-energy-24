@@ -1,11 +1,48 @@
 .welcome {
+  height: 500px;
+  margin-bottom: 20px;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: @green;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) , url(../../img/index-background-desktop.jpg);
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  @media (min-width: @tablet-width) {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: @black;
+    background-image: none;
+    background-color: @white;
+  }
+  @media (min-width: @desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}
+
+.welcome__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: @tablet-width) {
+    align-items: stretch;
+  }
 }
 
 .welcome__title {
+  width: 250px;
+  margin: 0;
+  text-align: center;
   color: @white;
+  .title;
+  @media (min-width: @tablet-width) {
+    width: 415px;
+    text-align: left;
+    color: @black;
+  }
 }
 
 .welcome__slogan {
@@ -15,9 +52,21 @@
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+   }
 }
 
 .welcome__button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 20px;
   font-size: 14px;
   line-height: 18px;
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 14px 26px;
+  }
 }
