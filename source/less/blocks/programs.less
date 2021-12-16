@@ -17,7 +17,7 @@
 .programs__item {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: @max-width-mobile;
   box-sizing: border-box;
   .margin-auto;
   margin-bottom: 20px;
@@ -28,7 +28,9 @@
   color: @black;
   background-color: @concrete;
   @media (min-width: @tablet-width) {
-    max-width: 800px;
+    min-height: 372px;
+    max-width: @max-width-tablet;
+    padding: 77px 62px 57px 52px;
   }
   @media (min-width: @desktop-width) {
     width: 47%;
@@ -44,6 +46,12 @@
   height: 50px;
   background-color: @green;
   border-radius: 50%;
+  @media (min-width: @tablet-width) {
+    top: 92px;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .programs__item--loss::after {
@@ -56,6 +64,14 @@
   height: 50px;
   background-image: url(../img/icon-loss-mobile.svg);
   background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    top: 81px;
+    left: auto;
+    right: 92px;
+    background-size: 140px 194px;
+    width: 140px;
+    height: 194px;
+  }
 }
 
 .programs__item--weight::after {
@@ -68,6 +84,14 @@
   height: 28px;
   background-image: url(../img/icon-weight-mobile.svg);
   background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    top: 135px;
+    left: auto;
+    right: 28px;
+    background-size: 268px 112px;
+    width: 268px;
+    height: 112px;
+  }
 }
 
 .programs__title {
@@ -80,6 +104,12 @@
   font-weight: 400;
   color: @black;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
@@ -89,6 +119,11 @@
 .programs__description {
   margin-bottom: 23px;
   .text;
+  @media (min-width: @tablet-width) {
+    width: 48%;
+    max-width: @max-width-mobile;
+    margin-bottom: 33px;
+  }
 }
 
 .programs__link {
@@ -103,6 +138,11 @@
   text-transform: uppercase;
   text-decoration: none;
   border-top: 1px solid #d9d9d9;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-top: none;
+  }
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;

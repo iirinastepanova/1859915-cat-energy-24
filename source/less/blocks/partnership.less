@@ -1,6 +1,4 @@
 .partnership {
-  display: flex;
-  justify-content: space-between;
   padding-top: 26px;
   padding-right: 20px;
   padding-bottom: 26px;
@@ -18,11 +16,20 @@
     background-color: @white;
   }
 }
+
 .partnership--index {
   background-color: @white;
 }
 
+.partnership__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: @max-width-mobile;
+  .margin-auto;
+}
+
 .partnership__title {
+  width: 140px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -31,6 +38,7 @@
 }
 
 .partnership__text {
+  width: 140px;
   font-family:  Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
