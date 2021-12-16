@@ -27,7 +27,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 134px 22%;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4 , 1fr);
@@ -40,17 +40,30 @@
   min-height: 60px;
   margin-bottom: 26px;
   padding-left: 80px;
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    padding-top: 111px;
+    padding-left: 0;
+  }
+}
+
+.advantages__item {
 
   &::before {
+    content: "";
     position: absolute;
     left: 0px;
-    content: "";
     display: block;
     width: 60px;
     height: 60px;
     background-color: @green;
     background-repeat: no-repeat;
     background-position: center;
+    @media (min-width: @tablet-width) {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--healthy::before {
@@ -68,6 +81,36 @@
   &--result::before {
     background-image: url(../img/icon-result-mobile.svg);
   }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: 0px;
+    display: none;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 280px;
+    line-height: 140px;
+    font-weight: 400;
+    color: @concrete;
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+  }
+  &--healthy::after {
+    content: "1";
+  }
+
+  &--fast::after {
+    content: "2";
+  }
+
+  &--easy::after {
+    content: "3";
+  }
+
+  &--result::after {
+    content: "4";
+  }
 }
-
-
