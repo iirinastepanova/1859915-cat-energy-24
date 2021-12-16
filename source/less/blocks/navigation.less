@@ -33,6 +33,7 @@
   border-top: 1px solid @concrete-light;
   text-decoration: none;
   text-transform: uppercase;
+  .hover-active-opacity;
   @media (min-width: @tablet-width) {
     padding-right: 0px;
     padding-left: 0px;
@@ -89,4 +90,18 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+
+@media (max-width: @mobile-width-only) {
+  .navigation__menu--closed {
+    display: none;
+  }
+  .navigation__toggle {
+    display: block;
+  }
+}
+
+.navigation--nojs .navigation__toggle {
+  display: none;
 }

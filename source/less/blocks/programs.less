@@ -17,20 +17,27 @@
 .programs__item {
   position: relative;
   width: 100%;
+  max-width: 500px;
   box-sizing: border-box;
+  .margin-auto;
   margin-bottom: 20px;
-  padding-top: 22px;
+  padding-top: 30px;
   padding-right: 20px;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   padding-left: 20px;
   color: @black;
   background-color: @concrete;
+  @media (min-width: @tablet-width) {
+    max-width: 800px;
+  }
   @media (min-width: @desktop-width) {
     width: 47%;
   }
 }
+
 .programs__item::before {
   position: absolute;
+  top: 24px;
   content: "";
   display: block;
   width: 50px;
@@ -38,9 +45,35 @@
   background-color: @green;
   border-radius: 50%;
 }
+
+.programs__item--loss::after {
+  position: absolute;
+  top: 21px;
+  left: 27px;
+  content: "";
+  display: block;
+  width: 36px;
+  height: 50px;
+  background-image: url(../img/icon-loss-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.programs__item--weight::after {
+  position: absolute;
+  top: 36px;
+  left: 10px;
+  content: "";
+  display: block;
+  width: 67px;
+  height: 28px;
+  background-image: url(../img/icon-weight-mobile.svg);
+  background-repeat: no-repeat;
+}
+
 .programs__title {
-  margin: 0;
-  padding-left: 65px; //???
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 69px; //???
   font-family: "Oswald", Arial, sans-serif;
   font-size: 24px;
   line-height: 37px;
@@ -54,10 +87,14 @@
 }
 
 .programs__description {
+  margin-bottom: 23px;
   .text;
 }
 
 .programs__link {
+  display: block;
+  width: 100%;
+  padding-top: 19px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -65,6 +102,7 @@
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+  border-top: 1px solid #d9d9d9;
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;

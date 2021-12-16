@@ -14,9 +14,9 @@
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
-        <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-        <a class="navigation__link" href="form.html">Подбор программы</a>
+          <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
+          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          <a class="navigation__link" href="form.html">Подбор программы</a>
       </nav>
     </header>
 
@@ -128,5 +128,21 @@
         </a>
       </section>
     </footer>
+    <script>
+      var navMain = document.querySelector('.navigation__menu');
+      var navToggle = document.querySelector('.navigation__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('navigation__menu--closed')) {
+          navMain.classList.remove('navigation__menu--closed');
+          navMain.classList.add('navigation__menu--opened');
+        } else {
+          navMain.classList.add('navigation__menu--closed');
+          navMain.classList.remove('navigation__menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>
