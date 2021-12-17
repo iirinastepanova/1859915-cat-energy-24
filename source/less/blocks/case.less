@@ -27,12 +27,13 @@
     "price"
     "slider" ;
     @media (min-width: @tablet-width) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 25%;
       grid-template-areas:
       "title title"
       "text text"
       "stats price"
       "slider slider" ;
+      max-width: @max-width-tablet;
     }
     @media (min-width: @desktop-width) {
       grid-template-areas:
@@ -40,17 +41,28 @@
       "text slider"
       "stats slider"
       "price slider" ;
+      max-width: @max-width-desktop;
     }
 }
 
 .case__title {
   grid-area: title;
-  .title
+  .title;
+  margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .case__text {
   grid-area: text;
   margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .case__stats {
@@ -61,6 +73,12 @@
   max-width: 290px;
   .margin-auto;
   margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+
 }
 
 .case__info {
@@ -105,13 +123,19 @@
   text-align: center;
   text-transform: uppercase;
   @media (min-width: @tablet-width) {
+    max-width: 190px;
+    margin-left: auto;
     font-size: 20px;
+    text-align: right;
   }
 }
 
 .case__slider {
   grid-area: slider;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 81%;
+  .margin-auto;
 }
 
 .case__visualize-time {

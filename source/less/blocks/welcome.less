@@ -27,9 +27,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: @max-width-mobile;
+  .margin-auto;
   @media (min-width: @tablet-width) {
     align-items: stretch;
     margin-bottom: 20px; //временно
+    max-width: @max-width-tablet;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: @max-width-desktop;
   }
 }
 
