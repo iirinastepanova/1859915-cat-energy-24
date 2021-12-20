@@ -41,15 +41,15 @@
           <fieldset class="form__group goal">
             <legend class="form__legend visually-hidden">Цель программы.</legend>
             <label class="form__label form__label--radio">
-              <input class="form__input goal__input" type="radio" name="goal" value="weight-loss"checked>
+              <input class="form__input-goal" type="radio" name="goal" value="weight-loss"checked>
               Похудение
             </label>
             <label class="form__label form__label--radio">
-              <input class="form__input goal__input" type="radio" name="goal" value="weight-gain" >
+              <input class="form__input-goal" type="radio" name="goal" value="weight-gain" >
               Набор массы
             </label>
             <label class="form__label form__label--radio">
-              <input class="form__input goal__input" type="radio" name="goal" value="need-help">
+              <input class="form__input-goal" type="radio" name="goal" value="need-help">
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
@@ -65,23 +65,25 @@
             <input class="form__input" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset>
-        <textarea name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="8" ></textarea>
+
+        <textarea class="form__textarea" name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="8"></textarea>
+
         <fieldset class="form__group optional">
           <legend class="form__legend">Дополнительно</legend>
           <label class="form__label form__label--check">
-            <input class="form__input optional__input" type="checkbox" name="sweetener" checked>
+            <input class="form__input-optional" type="checkbox" name="sweetener" checked>
             Сахарозаменитель
           </label>
           <label class="form__label form__label--check">
-            <input class="form__input optional__input" type="checkbox" name="water" >
+            <input class="form__input-optional" type="checkbox" name="water" >
             Питьевая вода
           </label>
           <label class="form__label form__label--check">
-            <input class="form__input optional__input" type="checkbox" name="milk">
+            <input class="form__input-optional" type="checkbox" name="milk">
             Молоко
           </label>
           <label class="form__label form__label--check">
-            <input class="form__input optional__input" type="checkbox" name="vitamins">
+            <input class="form__input-optional" type="checkbox" name="vitamins">
             Витамины
           </label>
         </fieldset>
