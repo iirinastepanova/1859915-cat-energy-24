@@ -1,9 +1,12 @@
 .cards-optional {
+  max-width: @max-width-mobile;
+  .margin-auto;
+  margin-bottom: 35px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
+    max-width: @max-width-tablet;
     padding-right: 30px;
     padding-left: 30px;
   }
