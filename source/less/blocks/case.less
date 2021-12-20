@@ -21,28 +21,29 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "title"
-    "text"
-    "stats"
-    "price"
-    "slider" ;
-    @media (min-width: @tablet-width) {
-      grid-template-columns: 1fr 25%;
-      grid-template-areas:
-      "title title"
-      "text text"
-      "stats price"
-      "slider slider" ;
-      max-width: @max-width-tablet;
-    }
-    @media (min-width: @desktop-width) {
-      grid-template-areas:
-      "title title"
-      "text slider"
-      "stats slider"
-      "price slider" ;
-      max-width: @max-width-desktop;
-    }
+  "title"
+  "text"
+  "stats"
+  "price"
+  "slider" ;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 25%;
+    grid-template-areas:
+    "title title"
+    "text text"
+    "stats price"
+    "slider slider" ;
+    max-width: @max-width-tablet;
+  }
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "text slider"
+    "stats slider"
+    "price slider" ;
+    max-width: @max-width-desktop;
+  }
 }
 
 .case__title {
@@ -78,7 +79,9 @@
     margin-left: 0;
     margin-bottom: 100px;
   }
-
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .case__info {
@@ -128,6 +131,14 @@
     font-size: 20px;
     text-align: right;
   }
+  @media (min-width: @desktop-width) {
+    max-width: none;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    text-align: left;
+  }
 }
 
 .case__slider {
@@ -136,6 +147,9 @@
   justify-content: space-between;
   width: 81%;
   .margin-auto;
+  @media (min-width: @desktop-width) {
+    align-items: flex-end;
+  }
 }
 
 .case__visualize-time {
