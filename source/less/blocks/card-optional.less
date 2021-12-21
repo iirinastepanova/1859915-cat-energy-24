@@ -1,4 +1,27 @@
+.card-optional {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "parameters"
+    "button";
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+}
+
+.card-optional:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
 .card-optional__title {
+  grid-area: title;
+  margin-top: 0;
+  margin-bottom: 13px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -6,10 +29,22 @@
   text-transform: uppercase;
 }
 
-.card-optional__termin ,
+.card-optional__parameters {
+  grid-area: parameters;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card-optional__termin,
 .card-optional__description {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+}
+
+.card-optional__button {
+  grid-area: button;
 }

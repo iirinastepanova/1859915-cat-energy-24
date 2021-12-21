@@ -1,16 +1,23 @@
 .advantages {
+  max-width: @max-width-mobile;
   margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  .margin-auto;
+
   @media (min-width: @tablet-width) {
+    max-width: @max-width-tablet;
     padding-left: 30px;
     padding-right: 30px;
   }
+
   @media (min-width: @desktop-width) {
+    max-width: @max-width-desktop;
     padding-left: 110px;
     padding-right: 110px;
   }
 }
+
 .advantages__title {
   .title;
 }
@@ -20,26 +27,98 @@
   padding: 0;
   list-style-type: none;
   .text;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 134px 22%;
   }
+
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
+
 .advantages__item {
   position: relative;
+  box-sizing: border-box;
+  min-height: 60px;
   margin-bottom: 26px;
   padding-left: 80px;
-}
-.advantages__item::before {
-  position: absolute;
-  left: 0px;
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-color: @green;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    padding-top: 111px;
+    padding-left: 0;
   }
+}
+
+.advantages__item {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--healthy::before {
+    background-image: url(../img/icon-healthy-mobile.svg);
+  }
+
+  &--fast::before {
+    background-image: url(../img/icon-fast-mobile.svg);
+  }
+
+  &--easy::before {
+    background-image: url(../img/icon-easy-mobile.svg);
+  }
+
+  &--result::before {
+    background-image: url(../img/icon-result-mobile.svg);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: 0;
+    display: none;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 280px;
+    line-height: 140px;
+    font-weight: 400;
+    color: @concrete;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &--healthy::after {
+    content: "1";
+  }
+
+  &--fast::after {
+    content: "2";
+  }
+
+  &--easy::after {
+    content: "3";
+  }
+
+  &--result::after {
+    content: "4";
+  }
+}

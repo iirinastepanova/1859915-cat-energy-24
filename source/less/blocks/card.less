@@ -1,11 +1,49 @@
 .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "image title"
+    "image parametrs"
+    "button button";
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 25px;
   background-color: @white;
+  border-bottom: 1px solid #ebebeb;
+
   @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "title"
+      "parametrs"
+      "button";
     background-color: @concrete;
+    border-bottom: none;
   }
 }
 
+.card--show-more {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "text"
+    "button";
+}
+
+.card-text {
+  grid-area: text;
+}
+
+.card__image {
+  grid-area: image;
+}
+
 .card__title {
+  grid-area: title;
+  width: 90px;
+  margin-top: 0;
+  margin-bottom: 14px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -13,11 +51,28 @@
   text-transform: uppercase;
 }
 
+.card__parameters {
+  grid-area: parametrs;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
 
-.card__termin ,
-.card__description {
+.card__termin,
+.card__description,
+.card__text {
   font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+}
+
+.card__description {
+  margin-left: auto;
+}
+
+.card__button {
+  grid-area: button;
+  padding: 10px 20px;
 }

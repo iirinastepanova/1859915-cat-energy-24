@@ -1,15 +1,15 @@
 .partnership {
-  display: flex;
-  justify-content: space-between;
   padding-top: 26px;
   padding-right: 20px;
   padding-bottom: 26px;
   padding-left: 20px;
   background-color: @concrete;
+
   @media (min-width: @tablet-width) {
     padding-right: 30px;
     padding-left: 30px;
   }
+
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 95px;
@@ -18,21 +18,51 @@
     background-color: @white;
   }
 }
+
 .partnership--index {
   background-color: @white;
 }
 
+.partnership__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: @max-width-mobile;
+  .margin-auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: @max-width-tablet;
+  }
+}
+
 .partnership__title {
+  width: 140px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .partnership__text {
-  font-family:  Arial, sans-serif;
+  width: 140px;
+  font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: @grey-light;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }

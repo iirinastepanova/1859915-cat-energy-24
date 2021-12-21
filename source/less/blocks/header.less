@@ -1,7 +1,7 @@
-
 .header {
   color: @black;
   background-color: @white;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -10,6 +10,7 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+
   @media (min-width: @desktop-width) {
     height: 140px;
     padding-left: 110px;
@@ -18,5 +19,13 @@
 }
 
 .header__logo {
-  height: 66px;
+  display: block;
+  padding: 24px 20px;
+  text-align: center;
+  .hover-active-opacity;
+}
+
+.header__logo img {
+  width: 101px;
+  height: 18px;
 }

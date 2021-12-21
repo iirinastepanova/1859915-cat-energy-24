@@ -1,8 +1,10 @@
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: @black;
   background-color: @white;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -10,12 +12,12 @@
     justify-content: space-between;
     width: 62%;
     max-width: 470px;
-    }
+  }
+
   @media (min-width: @desktop-width) {
     width: 39%;
     max-width: 570px;
   }
-
 }
 
 .navigation__link {
@@ -32,14 +34,17 @@
   border-top: 1px solid @concrete-light;
   text-decoration: none;
   text-transform: uppercase;
+  .hover-active-opacity;
+
   @media (min-width: @tablet-width) {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     border: none;
   }
+
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
@@ -47,7 +52,62 @@
 }
 
 .navigation__toggle {
+  position: absolute;
+  top: -55px;
+  right: 20px;
+  display: block;
+  width: 24px;
+  height: 18px;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 6.5px 0 0 @black, 0 14px 0 0 @black;
+}
+
+.navigation--opened .navigation__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 0;
+    width: 24.8px;
+    height: 1.5px;
+    background-color: @black;
   }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+@media (max-width: @mobile-width-only) {
+  .navigation__menu--closed {
+    display: none;
+  }
+
+  .navigation__toggle {
+    display: block;
+  }
+}
+
+.navigation--nojs .navigation__toggle {
+  display: none;
+}

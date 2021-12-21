@@ -1,10 +1,12 @@
 .form {
   margin-left: 20px;
   margin-right: 20px;
+
   @media (min-width: @tablet-width) {
     margin-left: 30px;
     margin-right: 30px;
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 110px;
     margin-right: 110px;
@@ -12,11 +14,17 @@
 }
 
 .form__group {
+  display: flex;
+  flex-direction: column;
   border: none;
 }
 
-.form__label {
-  font-family: "Oswald", Arial, sans-serif;
+.form__label,
+.form__input {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -27,11 +35,27 @@
 .form__label--radio {
   color: @grey;
 }
+
 .form__label--check {
   color: @black;
 }
 
-.form__input::placeholder {
+.form__input {
+  flex-grow: 1;
+  display: block;
+  margin-left: 12px;
+  padding: 13px 15px 14px;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+}
+
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
   font-family: "Oswald", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -54,4 +78,22 @@
   line-height: 16px;
   font-weight: 400;
   color: @black;
+}
+
+.form__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px 9px 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @grey-light;
+  text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+
+  &:focus-visible {
+    border-radius: 0;
+  }
 }
