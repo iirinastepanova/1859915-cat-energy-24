@@ -4,15 +4,16 @@
   padding-bottom: 40px;
   padding-left: 20px;
   background-color: @concrete-dark;
+
   @media (min-width: @tablet-width) {
     padding-right: 30px;
     padding-left: 30px;
   }
+
   @media (min-width: @desktop-width) {
     padding-right: 110px;
     padding-left: 110px;
   }
-
 }
 
 .case__wrapper {
@@ -21,27 +22,29 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "title"
-  "text"
-  "stats"
-  "price"
-  "slider" ;
+    "title"
+    "text"
+    "stats"
+    "price"
+    "slider";
+
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 25%;
     grid-template-areas:
-    "title title"
-    "text text"
-    "stats price"
-    "slider slider" ;
+      "title title"
+      "text text"
+      "stats price"
+      "slider slider";
     max-width: @max-width-tablet;
   }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "title title"
-    "text slider"
-    "stats slider"
-    "price slider" ;
+      "title title"
+      "text slider"
+      "stats slider"
+      "price slider";
     max-width: @max-width-desktop;
   }
 }
@@ -50,9 +53,11 @@
   grid-area: title;
   .title;
   margin-bottom: 40px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 63px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 146px;
   }
@@ -61,6 +66,7 @@
 .case__text {
   grid-area: text;
   margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
   }
@@ -74,11 +80,13 @@
   max-width: 290px;
   .margin-auto;
   margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 100px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
   }
@@ -89,12 +97,14 @@
   margin-bottom: 0;
   text-align: center;
 }
+
 .case__result {
   margin-bottom: 9px;
   font-family: "Oswald", Arial, sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
@@ -104,11 +114,12 @@
 .case__description {
   width: 82px;
   margin-left: 0;
-  font-family:  Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: @grey-light;
   text-transform: lowercase;
+
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
@@ -125,12 +136,14 @@
   color: @black;
   text-align: center;
   text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     max-width: 190px;
     margin-left: auto;
     font-size: 20px;
     text-align: right;
   }
+
   @media (min-width: @desktop-width) {
     max-width: none;
     margin-left: 0;
@@ -147,6 +160,7 @@
   justify-content: space-between;
   width: 81%;
   .margin-auto;
+
   @media (min-width: @desktop-width) {
     align-items: flex-end;
   }
@@ -159,6 +173,7 @@
   font-weight: 400;
   color: @black;
   text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;

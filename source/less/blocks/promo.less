@@ -1,19 +1,22 @@
 .promo {
   background-color: @green;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) , url(../../img/promo-background.jpg);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/promo-background.jpg);
   background-repeat: no-repeat;
   margin-bottom: 35px;
   padding: 30px; //временно
   max-width: @max-width-mobile;
   .margin-auto;
+
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
     .margin-auto;
   }
+
   @media (min-width: @desktop-width) {
 
   }
 }
+
 .promo__text {
   font-family: Arial, sans-serif;
   font-size: 16px;

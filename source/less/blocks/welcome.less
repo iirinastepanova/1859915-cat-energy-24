@@ -5,10 +5,11 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: @green;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) , url(../../img/index-background-desktop.jpg);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(../../img/index-background-desktop.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+
   @media (min-width: @tablet-width) {
     padding-top: 50px;
     padding-left: 30px;
@@ -17,6 +18,7 @@
     background-image: none;
     background-color: @white;
   }
+
   @media (min-width: @desktop-width) {
     padding-right: 110px;
     padding-left: 110px;
@@ -29,11 +31,13 @@
   align-items: center;
   max-width: @max-width-mobile;
   .margin-auto;
+
   @media (min-width: @tablet-width) {
     align-items: stretch;
     margin-bottom: 20px; //временно
     max-width: @max-width-tablet;
   }
+
   @media (min-width: @desktop-width) {
     max-width: @max-width-desktop;
   }
@@ -45,6 +49,7 @@
   text-align: center;
   color: @white;
   .title;
+
   @media (min-width: @tablet-width) {
     width: 415px;
     text-align: left;
@@ -61,6 +66,7 @@
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -74,6 +80,7 @@
   padding: 7px 20px;
   font-size: 14px;
   line-height: 18px;
+
   @media (min-width: @tablet-width) {
     width: 244px;
     padding: 14px 26px;

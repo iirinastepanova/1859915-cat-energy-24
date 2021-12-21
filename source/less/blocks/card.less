@@ -2,21 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  "image title"
-  "image parametrs"
-  "button button";
+    "image title"
+    "image parametrs"
+    "button button";
   width: 100%;
   padding-top: 19px;
   padding-bottom: 25px;
   background-color: @white;
   border-bottom: 1px solid #ebebeb;
+
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "image"
-    "title"
-    "parametrs"
-    "button";
+      "image"
+      "title"
+      "parametrs"
+      "button";
     background-color: @concrete;
     border-bottom: none;
   }
@@ -25,10 +26,11 @@
 .card--show-more {
   grid-template-columns: 1fr;
   grid-template-areas:
-  "title"
-  "text"
-  "button";
+    "title"
+    "text"
+    "button";
 }
+
 .card-text {
   grid-area: text;
 }
@@ -57,7 +59,7 @@
   margin-bottom: 22px;
 }
 
-.card__termin ,
+.card__termin,
 .card__description,
 .card__text {
   font-family: Arial, sans-serif;
