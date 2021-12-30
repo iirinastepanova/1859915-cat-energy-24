@@ -3,3 +3,18 @@
   height: 400px;
   background-color: #68b738a8;
 }
+
+.wrapper {
+  position: relative;
+  display: block;
+  min-height: 300px;
+
+  @media (min-width: @tablet-width) {
+    background-color: royalblue;
+    max-width: @max-width-tablet;
+    .margin-auto;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: @max-width-desktop;
+  }
+}
