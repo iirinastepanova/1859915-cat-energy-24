@@ -20,11 +20,11 @@
       </nav>
     </header>
     <main class="main program-selection">
-      <h1 class="program-selection__title">Подбор программы</h1>
-      <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+        <h1 class="form__title">Подбор программы</h1>
+        <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <div class="form-group-wrapper">
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--info">
             <label class="form__label">
               Имя:*
               <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
@@ -38,7 +38,7 @@
               <input class="form__input" type="number" name="cat-age" placeholder="7">
             </label>
           </fieldset>
-          <fieldset class="form__group goal">
+          <fieldset class="form__group form__group--goal">
             <legend class="form__legend visually-hidden">Цель программы.</legend>
             <label class="form__label form__label--radio">
               <input class="form__input-goal" type="radio" name="goal" value="weight-loss"checked>
@@ -54,7 +54,7 @@
             </label>
           </fieldset>
         </div>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--contacts">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <label class="form__label">
             E-mail:*
@@ -65,10 +65,11 @@
             <input class="form__input" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset>
-
-        <textarea class="form__textarea" name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="8"></textarea>
-
-        <fieldset class="form__group optional">
+        <fieldset class="form__group form__group--comments">
+          <legend class="form__legend">Комментарий</legend>
+          <textarea class="form__textarea" name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="8"></textarea>
+        </fieldset>
+        <fieldset class="form__group form__group--optional">
           <legend class="form__legend">Дополнительно</legend>
           <label class="form__label form__label--check">
             <input class="form__input-optional" type="checkbox" name="sweetener" checked>
@@ -87,14 +88,14 @@
             Витамины
           </label>
         </fieldset>
-        <div class="form-button-wrapper">
-          <button class="button" type="submit">Отправить заявку</button>
+        <div class="form__button-wrapper">
+          <button class="form__button button" type="submit">Отправить заявку</button>
           <p class="form__tip">* — Обязательные поля</p>
         </div>
       </form>
 
       <div class="partnership-map-wrapper">
-        <section class="partnership partnership--index">
+        <section class="partnership">
           <div class="partnership__wrapper">
             <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
             <p class="partnership__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
