@@ -12,14 +12,29 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 86px;
+    padding: 0;
+    max-width: none;
   }
 }
 
 .cards-optional__title {
+  margin-top: 0;
+  margin-bottom: 36px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 81px;
+  }
 }
