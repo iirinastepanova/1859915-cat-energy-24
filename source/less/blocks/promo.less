@@ -1,22 +1,53 @@
 .promo {
-  background-color: @green;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-background.jpg");
-  background-repeat: no-repeat;
+  box-sizing: border-box;
+  min-height: 290px;
   margin-bottom: 35px;
   padding: 30px; //временно
   max-width: @max-width-mobile;
   .margin-auto;
+  background-color: @green;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-mobile@2x.jpg");
+    background-size: auto auto;
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
+    min-height: 200px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 228px;
+    min-height: 289px;
     margin-top: 118px;
     margin-bottom: auto;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-bg-desktop@2x.jpg");
+    }
   }
 }
+
+// .promo::before {
+//   order: 2;
+//   content: "";
+//   display: block;
+//   width: auto;
+//   height: 100px;
+//   margin: -30px;
+//   background-color: rgba(223, 241, 57, 0.479)
+// }
 
 .promo__text {
   font-family: "Arial", sans-serif;
