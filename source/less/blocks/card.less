@@ -41,19 +41,36 @@
     "text"
     "button";
   background-color: @white;
-  border: 1px solid @concrete;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @concrete;
+  }
 }
 
 .card--show-more .card__title {
-  width: 135px;
-  margin-bottom: 23px;
-  padding-top: 100px;
+  width: 210px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 78px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 135px;
+    margin-bottom: 23px;
+    padding-top: 161px;
+  }
+
 }
 
 .card--show-more .card__text {
+  margin-top: 0;
   text-align: center;
-  margin-bottom: 87px;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 87px;
+  }
 }
 
 .card-text {
