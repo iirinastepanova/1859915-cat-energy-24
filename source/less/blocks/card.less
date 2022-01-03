@@ -62,13 +62,40 @@
 
 .card__image {
   grid-area: image;
+  position: absolute;
+  display: block;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
     position: relative;
+  }
+}
+
+.card__image--small {
+  top: 21px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
     top: -45px;
-    left: auto;
     width: 161px;
     height: 172px;
+    margin-bottom: -11px;
+  }
+}
+
+.card__image--big {
+  top: 11px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    top: -73px;
+    width: 168px;
+    height: 200px;
+    margin-bottom: -39px;
   }
 }
 
