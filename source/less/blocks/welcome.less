@@ -1,47 +1,140 @@
 .welcome {
+  position: relative;
   height: 500px;
   margin-bottom: 20px;
-  padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: @green;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.jpg");
+  // background-color: @green;
+  // background-color: #68b73878;
+  // background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: auto 300px;
   background-position: center;
 
   @media (min-width: @tablet-width) {
+    height: 810px;
     padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
     color: @black;
     background-image: none;
     background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    position: static;
+    height: 694px;
+    // padding-right: 110px;
+    // padding-left: 110px;
   }
 }
 
+.welcome {
+  &::before {
+  content: "";
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 302px;
+  background-image: url("../img/index-background-mobile.jpg");
+  background-color: @green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: @desktop-width) {
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 694px;
+    background-image: url("../img/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+  }
+
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+
+    @media (min-width: @desktop-width) {
+      z-index: 1;
+      right: 0;
+      width: 50%;
+      height: 694px;
+    }
+  }
+}
+
+
 .welcome__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: @max-width-mobile;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
   .margin-auto;
 
   @media (min-width: @tablet-width) {
+    z-index: 1;
     align-items: stretch;
     margin-bottom: 20px; //временно
     max-width: @max-width-tablet;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: @max-width-desktop;
+    z-index: 2;
   }
 }
+
+.welcome__wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  width: 100%;
+  height: 270px;
+  background-image: url("../img/welcome-can-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+    background-size: cover;
+    background-image: url("../img/welcome-can-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -32px;
+    bottom: auto;
+    left: 40px;
+    width: 552px;
+    height: 499px;
+    background-image: url("../img/welcome-can-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 
 .welcome__title {
   width: 250px;
@@ -68,6 +161,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
     color: @black;
