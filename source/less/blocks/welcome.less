@@ -3,8 +3,6 @@
   height: 500px;
   margin-bottom: 20px;
   // background-color: @green;
-  // background-color: #68b73878;
-  // background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: auto 300px;
   background-position: center;
@@ -19,35 +17,39 @@
 
   @media (min-width: @desktop-width) {
     position: static;
-    height: 694px;
+    height: 585px;
+    box-sizing: border-box;
+    margin-bottom: 82px;
     // padding-right: 110px;
     // padding-left: 110px;
   }
-}
 
-.welcome {
   &::before {
-  content: "";
-  position: absolute;
-  z-index: -3;
-  width: 100%;
-  height: 302px;
-  background-image: url("../img/index-background-mobile.jpg");
-  background-color: @green;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  @media (min-width: @desktop-width) {
-    z-index: 0;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 694px;
-    background-image: url("../img/index-background-desktop.jpg");
+    content: "";
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 302px;
+    background-image: url("../img/index-background-mobile.jpg");
+    background-color: @green;
     background-repeat: no-repeat;
-  }
+    background-size: cover;
+    background-position: center;
 
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      z-index: 0;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 50%;
+      height: 694px;
+      background-image: url("../img/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+    }
   }
 
   &::after {
@@ -60,15 +62,19 @@
     height: 302px;
     background-color: rgba(104, 183, 56, 0.85);
 
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
     @media (min-width: @desktop-width) {
       z-index: 1;
       right: 0;
+      display: block;
       width: 50%;
       height: 694px;
     }
   }
 }
-
 
 .welcome__wrapper {
   position: relative;
@@ -92,8 +98,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: @max-width-desktop;
     z-index: 2;
+    max-width: @max-width-desktop;
+    margin-bottom: 0;
   }
 }
 

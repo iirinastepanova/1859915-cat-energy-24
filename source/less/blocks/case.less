@@ -1,24 +1,32 @@
 .case {
-  padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-left: 20px;
   background-color: @concrete-dark;
 
   @media (min-width: @tablet-width) {
-    padding-right: 30px;
-    padding-left: 30px;
+    border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    border-top: none;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 618px;
+      background-color: @white;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 160px;
+    }
   }
 }
 
 .case__wrapper {
-  max-width: @max-width-mobile;
-  .margin-auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -28,9 +36,17 @@
     "price"
     "image"
     "slider";
+  max-width: @max-width-mobile;
+  .margin-auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 25%;
+    position: relative;
+    z-index: 2;
+    grid-template-columns: 1fr 26%;
     grid-template-areas:
       "title title"
       "text text"
@@ -38,6 +54,9 @@
       "image image"
       "slider slider";
     max-width: @max-width-tablet;
+    padding-top: 42px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -165,6 +184,11 @@
   @media (min-width: @tablet-width) {
     width: 524px;
     height: auto;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -260px;
   }
 }
 
