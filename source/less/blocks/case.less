@@ -98,11 +98,11 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
-  max-width: 290px;
   .margin-auto;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    width: 366px;
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 100px;
@@ -114,9 +114,34 @@
 }
 
 .case__info {
+  position: relative;
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
+}
+
+.case__info::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -21px;
+  display: block;
+  width: 124px;
+  height: 56px;
+  background-image: url("../img/info-frame.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: -15px;
+    left: 0;
+    width: 162px;
+    height: 72px;
+    background-size: 162px 72px;
+  }
 }
 
 .case__result {
@@ -133,6 +158,7 @@
 }
 
 .case__description {
+  display: block;
   width: 82px;
   margin-left: 0;
   font-family: "Arial", sans-serif;
@@ -142,8 +168,15 @@
   text-transform: lowercase;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 1;
+    width: max-content;
+    max-width: 142px;
+    .margin-auto;
+    padding: 0 8px;
     font-size: 14px;
     line-height: 14px;
+    background-color: #EAEAEA;
   }
 }
 

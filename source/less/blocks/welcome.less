@@ -23,7 +23,7 @@
     // padding-right: 110px;
     // padding-left: 110px;
   }
-
+  //кот на фоне
   &::before {
     content: "";
     position: absolute;
@@ -35,6 +35,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: cover;
+    }
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -49,9 +54,15 @@
       height: 694px;
       background-image: url("../img/index-background-desktop.jpg");
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
-
+  //зеленое размытие
   &::after {
     content: "";
     display: block;
@@ -104,6 +115,7 @@
   }
 }
 
+//банка корма
 .welcome__wrapper::before {
   content: "";
   position: absolute;
@@ -119,6 +131,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/welcome-can-mobile@2x.png");
+    // background-size: 280px auto;
+  }
+
   @media (min-width: @tablet-width) {
     display: block;
     z-index: -1;
@@ -128,6 +145,12 @@
     background-image: url("../img/welcome-can-tablet.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/welcome-can-tablet@2x.png");
+      background-size: 709px auto;
+    }
+
   }
 
   @media (min-width: @desktop-width) {
@@ -139,6 +162,11 @@
     background-image: url("../img/welcome-can-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/welcome-can-desktop@2x.png");
+    background-size: 552px auto;
   }
 }
 
