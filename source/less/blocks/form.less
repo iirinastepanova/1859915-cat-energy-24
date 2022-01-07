@@ -1,13 +1,11 @@
 .form {
-  padding-left: 20px;
-  padding-right: 20px;
+  .padding-mobile;
   max-width: @max-width-mobile;
   .margin-auto;
 
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
-    padding-right: 30px;
-    padding-left: 30px;
+    .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {

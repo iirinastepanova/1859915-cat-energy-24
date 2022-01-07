@@ -94,18 +94,16 @@
   align-items: center;
   max-width: @max-width-mobile;
   padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .padding-mobile;
   .margin-auto;
 
   @media (min-width: @tablet-width) {
     z-index: 1;
     align-items: stretch;
-    margin-bottom: 20px; //временно
     max-width: @max-width-tablet;
     height: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 20px; //временно
+    .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {
