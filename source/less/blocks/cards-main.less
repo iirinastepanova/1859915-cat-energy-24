@@ -3,17 +3,16 @@
   flex-direction: column;
   max-width: @max-width-mobile;
   .margin-auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  .padding-mobile;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: minmax(1fr, 40%) minmax(1fr, 40%);
     gap: 140px 60px;
-    margin-bottom: 68px;
-    padding-right: 30px;
-    padding-left: 30px;
     max-width: @max-width-tablet;
+    margin-bottom: 68px;
+    .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {

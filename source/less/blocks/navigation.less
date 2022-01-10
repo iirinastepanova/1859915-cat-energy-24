@@ -20,11 +20,18 @@
   }
 }
 
+.header--main .navigation {
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
+}
+
+
 .navigation__link {
+  position: relative;
   padding-top: 22px;
   padding-bottom: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .padding-mobile;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
@@ -48,8 +55,32 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    color: @black;
   }
 }
+
+.header--main .navigation__link {
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+}
+
+.navigation__link--current::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+  }
+}
+
+.header--main .navigation__link--current::after {
+  background-color: @white;
+}
+
 
 .navigation__toggle {
   position: absolute;

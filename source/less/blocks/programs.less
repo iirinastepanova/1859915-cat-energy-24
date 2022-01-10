@@ -1,12 +1,10 @@
 .programs {
-  padding-left: 20px;
-  padding-right: 20px;
   max-width: @max-width-mobile;
+  .padding-mobile;
   .margin-auto;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    .padding-tablet;
     max-width: @max-width-tablet;
   }
 
@@ -23,8 +21,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  padding-top: 30px;
-  padding-bottom: 22px;
+  padding: 30px 33px 22px 20px;
   color: @black;
   background-color: @concrete;
 
@@ -68,7 +65,7 @@
 .programs__item--loss::after {
   position: absolute;
   top: 21px;
-  left: 9px;
+  left: 29px;
   content: "";
   display: block;
   width: 36px;
@@ -98,7 +95,7 @@
 .programs__item--weight::after {
   position: absolute;
   top: 35px;
-  left: -7px;
+  left: 13px;
   content: "";
   display: block;
   width: 67px;

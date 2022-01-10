@@ -9,13 +9,20 @@
     height: 100px; //?????
     max-width: @max-width-tablet;
     .margin-auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {
     height: 140px;
     max-width: @max-width-desktop;
+  }
+}
+
+.header--main {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
   }
 }
 
