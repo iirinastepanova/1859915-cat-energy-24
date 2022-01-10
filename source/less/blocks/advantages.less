@@ -13,8 +13,6 @@
 
   @media (min-width: @desktop-width) {
     max-width: @max-width-desktop;
-    padding-left: 110px;
-    padding-right: 110px;
   }
 }
 
@@ -31,12 +29,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 134px 22%;
+    gap: 50px 8%;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px;
+    gap: 5%;
   }
 }
 
@@ -48,13 +46,19 @@
   padding-left: 80px;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    min-width: 250px;
+    min-height: 237px;
+    margin-right: 78px;
     padding-top: 111px;
     padding-left: 0;
   }
-}
 
-.advantages__item {
+  @media (min-width: @desktop-width) {
+    max-width: 250px;
+    margin-right: 0;
+  }
+
+  //зеленый квадрат
   &::before {
     content: "";
     position: absolute;
@@ -72,30 +76,30 @@
       height: 80px;
     }
   }
-
+  //картинки в квадратах
   &--healthy::before {
-    background-image: url(../img/icon-healthy-mobile.svg);
+    background-image: url("../img/icon-healthy-mobile.svg");
   }
 
   &--fast::before {
-    background-image: url(../img/icon-fast-mobile.svg);
+    background-image: url("../img/icon-fast-mobile.svg");
   }
 
   &--easy::before {
-    background-image: url(../img/icon-easy-mobile.svg);
+    background-image: url("../img/icon-easy-mobile.svg");
   }
 
   &--result::before {
-    background-image: url(../img/icon-result-mobile.svg);
+    background-image: url("../img/icon-result-mobile.svg");
   }
-
+  //цифры для пунктов
   &::after {
     position: absolute;
     z-index: -1;
     top: 30px;
     right: 0;
     display: none;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     line-height: 140px;
     font-weight: 400;

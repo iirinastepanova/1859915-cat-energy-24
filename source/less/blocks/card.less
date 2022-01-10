@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -6,6 +7,7 @@
     "image parametrs"
     "button button";
   width: 100%;
+  box-sizing: border-box;
   padding-top: 19px;
   padding-bottom: 25px;
   background-color: @white;
@@ -18,8 +20,17 @@
       "title"
       "parametrs"
       "button";
+    width: 66%;
+    min-width: 325px;
+    max-width: 500px;
+    padding: 20px 37px 39px 37px;
+    .margin-auto;
     background-color: @concrete;
     border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 245px;
   }
 }
 
@@ -29,6 +40,20 @@
     "title"
     "text"
     "button";
+  background-color: @white;
+  border: 1px solid @concrete;
+}
+
+.card--show-more .card__title {
+  width: 135px;
+  margin-bottom: 23px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.card--show-more .card__text {
+  text-align: center;
+  margin-bottom: 87px;
 }
 
 .card-text {
@@ -37,6 +62,14 @@
 
 .card__image {
   grid-area: image;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -45px;
+    left: auto;
+    width: 161px;
+    height: 172px;
+  }
 }
 
 .card__title {
@@ -44,11 +77,15 @@
   width: 90px;
   margin-top: 0;
   margin-bottom: 14px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .margin-auto;
+  }
 }
 
 .card__parameters {
@@ -62,7 +99,7 @@
 .card__termin,
 .card__description,
 .card__text {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;

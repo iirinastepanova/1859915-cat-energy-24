@@ -12,6 +12,13 @@
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "title parameters button";
+    align-items: baseline;
+    padding: 15px 0;
+  }
 }
 
 .card-optional:last-child {
@@ -22,11 +29,15 @@
   grid-area: title;
   margin-top: 0;
   margin-bottom: 13px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .card-optional__parameters {
@@ -35,11 +46,16 @@
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    min-width: 288px;
+    margin-right: 38px;
+  }
 }
 
 .card-optional__termin,
 .card-optional__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -47,4 +63,8 @@
 
 .card-optional__button {
   grid-area: button;
+
+  @media (min-width: @desktop-width) {
+    padding: 7px 26px;
+  }
 }
