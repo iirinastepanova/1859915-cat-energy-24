@@ -7,14 +7,16 @@
     flex-direction: row;
     justify-content: space-between;
     height: 100px; //?????
+    min-width: 708px;
     max-width: @max-width-tablet;
-    .margin-auto;
     .padding-tablet;
+    .margin-auto;
   }
 
   @media (min-width: @desktop-width) {
     height: 140px;
-    max-width: @max-width-desktop;
+    min-width: @max-width-desktop;
+    .margin-auto;
   }
 }
 
