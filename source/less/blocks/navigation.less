@@ -1,7 +1,9 @@
 .navigation {
-  position: relative;
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
   color: @black;
   background-color: @white;
 
@@ -19,6 +21,7 @@
     max-width: 570px;
   }
 }
+
 
 .header--main .navigation {
   @media (min-width: @desktop-width) {
@@ -122,9 +125,7 @@
     }
   }
 
-
   .navigation--closed {
-
     & .navigation__toggle::before {
       content: "";
       position: absolute;
@@ -144,4 +145,8 @@
 
 .navigation--nojs .navigation__toggle {
   display: none;
+}
+
+.navigation--nojs {
+  position: static;
 }
