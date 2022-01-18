@@ -28,17 +28,24 @@
     </svg>
 
     <header class="header header--main">
-      <a class="header__logo" href="index.html">
-        <img src="img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
-      </a>
-      <nav class="navigation navigation--closed">
-        <button class="navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-          <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
-          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          <a class="navigation__link" href="form.html">Подбор программы</a>
-      </nav>
+      <div class="header__wrapper">
+        <a class="header__logo" href="index.html">
+          <img class="header__logo-mobile" src="img/logo-mobile.svg" width="33" height="37">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo.svg" width="101" height="18" alt="Функциональное питание для котов «Кэт Энерджи».">
+          </picture>
+        </a>
+        <nav class="navigation navigation--closed">
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+            <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
+            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+            <a class="navigation__link" href="form.html">Подбор программы</a>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
