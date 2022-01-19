@@ -1,7 +1,34 @@
 .copyright__link {
+  position: relative;
+  display: block;
+  width: 100%;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: @grey-light;
   text-decoration: none;
+
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo-icon {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  fill: @grey-special;
+
+  // &:hover {
+  //   fill: @green;
+  // }
+
+}
+
+.copyright__link:hover .copyright__logo-icon {
+  fill: @green;
 }

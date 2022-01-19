@@ -1,5 +1,8 @@
 * {
-  outline: 1px solid rgb(224, 123, 92);
+  // outline: 1px solid rgb(224, 123, 92);
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .text {
@@ -37,6 +40,10 @@
 .hover-active-opacity {
   &:hover {
     opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.4;
   }
 
   &:active {

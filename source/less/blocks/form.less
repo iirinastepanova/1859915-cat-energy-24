@@ -209,14 +209,45 @@
   display: block;
   margin-left: 12px;
   padding: 13px 15px 14px;
-  border: 1px solid #e7e7e7;
+  outline: 1px solid #e7e7e7;
+  border: none;
   border-radius: 0;
+
+  &:hover {
+    outline: 1px solid @silver;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid @grey-light;
+    outline-offset: -2px;
+  }
+}
+
+//состояние ошибки
+.error {
+  outline: 2px solid @error;
+  outline-offset: -2px;
+
+  &:hover {
+    outline: 2px solid #ff8282a8;
+  }
+
+  &:focus {
+    outline: 2px solid #f84c4c;
+  }
 }
 
 .form__input-goal,
 .form__input-optional {
   position: relative;
-  display: none;
+  .visually-hidden;
+}
+
+.form__input-goal:focus + .form__control,
+.form__input-optional:focus + .form__control {
+  outline: 2px solid @grey-light;
+  outline-offset: -2px;
 }
 
 .form__input::placeholder,
@@ -248,7 +279,15 @@
   height: 30px;
   box-sizing: border-box;
   background-color: @white;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @silver;
+
+  &:hover {
+    border: 1px solid #bababa;
+  }
+
+  &:focus {
+    outline: 1px solid @grey-light;
+  }
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -269,7 +308,6 @@
   height: 14px;
   background-color: @green;
   border-radius: 50%;
-  border: 1px solid #cdcdcd;
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -316,8 +354,19 @@
   font-weight: 400;
   color: @grey-light;
   text-transform: uppercase;
-  border: 1px solid #e7e7e7;
+  outline: 1px solid #e7e7e7;
+  border: none;
   border-radius: 0;
+
+  &:hover {
+    outline: 1px solid @silver;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid @grey-light;
+    outline-offset: -2px;
+  }
 
   &:focus-visible {
     border-radius: 0;

@@ -1,3 +1,30 @@
 .social__button {
   text-decoration: none;
+
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social-icon {
+  fill: @grey-special;
+
+  &:hover {
+    fill: @green;
+  }
+
+}
+
+.social-icon--stroke {
+  fill: none;
+  stroke: @grey-special;
+
+  &:hover {
+    fill: none;
+    stroke: @green;
+  }
 }
