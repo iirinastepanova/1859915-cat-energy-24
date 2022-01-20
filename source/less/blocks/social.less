@@ -1,4 +1,6 @@
 .social__button {
+  display: block;
+  padding: 10px;
   text-decoration: none;
 
   &:focus {
@@ -8,6 +10,16 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.social__button:nth-of-type(3n+1) {
+  margin-right: 15px;
+}
+.social__button:nth-of-type(3n+2) {
+  margin-right: 13px;
+}
+.social__button:nth-of-type(3n) {
+  margin-right: 5px;
 }
 
 .social-icon {

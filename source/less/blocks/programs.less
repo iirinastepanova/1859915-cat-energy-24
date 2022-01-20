@@ -22,7 +22,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  padding: 30px 33px 22px 20px;
+  padding: 30px 21px 22px 20px;
   color: @black;
   background-color: @concrete;
 
@@ -196,24 +196,34 @@
   &::before {
     content: "";
     position: absolute;
-    top: 32px;
-    left: 128px;
+    top: 26px;
+    left: 100px;
     display: block;
     width: 18px;
     height: 2px;
     background-color: @black;
+
+    @media (min-width: @tablet-width) {
+      top: 32px;
+      left: 128px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 27px;
-    left: 145px;
+    top: 21px;
+    left: 117px;
     display: block;
     width: 12px;
     height: 14px;
     background-image: url("../img/triangle.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 27px;
+      left: 145px;
+    }
   }
 }
 
