@@ -6,8 +6,9 @@
   background-position: center;
 
   @media (min-width: @tablet-width) {
-    height: 810px;
-    padding-top: 23px;
+    min-height: 810px;
+    margin-bottom: 0;
+    padding-top: 20px;
     color: @black;
     background-image: none;
     background-color: @white;
@@ -99,9 +100,7 @@
     z-index: 1;
     align-items: stretch;
     max-width: @max-width-tablet;
-    height: 100%;
-    margin-bottom: 20px; //временно
-    // .padding-tablet;
+    min-height: 810px;
     padding-left: 117px;
   }
 
@@ -194,7 +193,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
     margin-left: 2px;
     font-size: 20px;
     line-height: 20px;

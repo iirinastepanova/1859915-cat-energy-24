@@ -14,15 +14,23 @@
 
 .social__button:nth-of-type(3n+1) {
   margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 8px;
+  }
 }
 .social__button:nth-of-type(3n+2) {
   margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
 }
 .social__button:nth-of-type(3n) {
   margin-right: 5px;
 }
 
-.social-icon {
+.social__icon {
   fill: @grey-special;
 
   &:hover {
@@ -31,7 +39,28 @@
 
 }
 
-.social-icon--stroke {
+.social__icon--vk {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__icon--inst {
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon--fb {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.social__icon--stroke {
   fill: none;
   stroke: @grey-special;
 
