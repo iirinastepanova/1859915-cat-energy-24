@@ -15,6 +15,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: @max-width-desktop;
+    margin-bottom: 41px;
   }
 }
 
@@ -35,7 +36,7 @@
 
   @media (min-width: @desktop-width) {
     width: 47%;
-    padding: 77px 45px 59px 52px;
+    padding: 77px 45px 59px 54px;
   }
 }
 
@@ -119,7 +120,7 @@
 
   @media (min-width: @desktop-width) {
     top: 67px;
-    left: 33px;
+    left: 36px;
     right: auto;
     width: 134px;
     height: 56px;
@@ -147,10 +148,16 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 73px;
-    margin-left: 50px;
+    margin-left: 11px;
     font-size: 36px;
     line-height: 36px;
     text-align: center;
+  }
+}
+
+.programs__item--weight .programs__title {
+  @media (min-width: @desktop-width) {
+    margin-left: 57px;
   }
 }
 
@@ -233,6 +240,7 @@
 .programs__link:hover::before {
   width: 26px;
 }
+
 .programs__link:hover::after {
   left: 153px;
 }

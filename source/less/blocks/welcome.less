@@ -16,11 +16,9 @@
 
   @media (min-width: @desktop-width) {
     position: static;
-    height: 585px;
+    min-height: 555px;
     box-sizing: border-box;
     margin-bottom: 82px;
-    // padding-right: 110px;
-    // padding-left: 110px;
   }
   //кот на фоне
   &::before {
@@ -107,7 +105,10 @@
   @media (min-width: @desktop-width) {
     z-index: 2;
     max-width: @max-width-desktop;
+    min-height: min-content;
     margin-bottom: 0;
+    padding-top: 63px;
+    padding-left: 181px;
   }
 }
 
@@ -150,9 +151,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -32px;
+    top: -20px;
     bottom: auto;
-    left: 40px;
+    left: 227px;
     width: 552px;
     height: 499px;
     background-image: url("../img/welcome-can-desktop.png");
@@ -198,6 +199,11 @@
     font-size: 20px;
     line-height: 20px;
     color: @black;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+      margin-bottom: 51px;
+    }
   }
 }
 
@@ -214,5 +220,9 @@
     margin-left: 3px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
