@@ -6,7 +6,10 @@
 
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
-    .padding-tablet;
+    padding-top: 48px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,7 +65,7 @@
   margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 72px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -88,7 +91,7 @@
   margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
   }
 }
 
@@ -96,7 +99,7 @@
   margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 67px;
   }
 }
 
@@ -107,7 +110,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 61px;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
@@ -169,6 +172,7 @@
   background-color: @white;
 
   @media (min-width: @tablet-width) {
+    width: auto;
     margin-bottom: 76px;
   }
 }
@@ -183,6 +187,10 @@
 
 .form__group--optional .form__legend {
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
 }
 
 //обертка для перестроения блока с радиокнопками
@@ -214,12 +222,16 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 
 .form__group--optional .form__label {
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 42px;
+  }
 }
 //form__label
 .form__label--field {
@@ -238,6 +250,10 @@
 .form__label--radio {
   margin-bottom: 25px;
   color: @grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .form__label--check {
@@ -252,6 +268,11 @@
   outline: 1px solid #e7e7e7;
   border: none;
   border-radius: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 17px 12px;
+    margin-left: 20px;
+  }
 
   &:hover {
     outline: 1px solid @silver;
@@ -399,6 +420,11 @@
   border: none;
   border-radius: 0;
 
+  @media (min-width: @tablet-width) {
+    min-height: 171px;
+    padding-left: 19px;
+  }
+
   &:hover {
     outline: 1px solid @silver;
   }
@@ -432,6 +458,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -444,6 +472,12 @@
   font-weight: 400;
   text-align: center;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+  }
 }
 
 .form__icon {
