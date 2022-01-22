@@ -10,17 +10,16 @@
   border-top: 1px solid @silver;
 
   @media (min-width: @tablet-width) {
-    grid-template-areas:
-    "title parameters"
-    "button button";
+    grid-template-areas: "title parameters" "button button";
     padding: 25px 38px 29px;
     border-left: 1px solid @silver;
     border-right: 1px solid @silver;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 288px 245px;
     grid-template-areas: "title parameters button";
+    column-gap: 34px;
     align-items: baseline;
     padding: 17px 0 8px;
     border-left: none;
@@ -66,8 +65,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 288px;
-    margin-right: 38px;
+    width: 290px;
   }
 }
 
@@ -83,12 +81,18 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .card-optional__button {
   grid-area: button;
 
   @media (min-width: @desktop-width) {
-    padding: 7px 26px;
+    margin-top: -3px;
+    margin-bottom: 9px;
+    padding: 8px 26px;
   }
 }
