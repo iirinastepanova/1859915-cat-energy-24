@@ -46,7 +46,7 @@
   border-top: 1px solid @concrete-light;
   text-decoration: none;
   text-transform: uppercase;
-  .hover-active-opacity;
+  .hov-act-focus-opacity;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
@@ -63,6 +63,12 @@
     font-size: 20px;
     line-height: 30px;
     color: @black;
+  }
+}
+
+.navigation__link:last-of-type {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @concrete-light;
   }
 }
 
@@ -100,7 +106,9 @@
 }
 
 .header--main .navigation__link--current::after {
-  background-color: @white;
+  @media (min-width: @desktop-width) {
+    background-color: @white;
+  }
 }
 
 .navigation__toggle {
@@ -118,7 +126,7 @@
     background-color: @white;
     cursor: pointer;
     border: none;
-    .hover-active-opacity;
+    .hov-act-focus-opacity;
 
     @media (min-width: @tablet-width) {
       display: none;

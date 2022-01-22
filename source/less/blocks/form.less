@@ -178,7 +178,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 76px
+    gap: 76px;
   }
 }
 
@@ -204,6 +204,7 @@
     margin-bottom: 70px;
   }
 }
+
 .form__group--comments .form__legend {
   margin-bottom: 38px;
 
@@ -216,7 +217,7 @@
   width: 100%;
   min-height: 150px;
   box-sizing: border-box;
-  padding: 9px 12px 9px 15px;
+  padding: 19px 12px 9px 15px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -230,6 +231,8 @@
   @media (min-width: @tablet-width) {
     min-height: 171px;
     padding-left: 19px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &:hover {
@@ -323,25 +326,24 @@
   align-items: baseline;
 }
 
-.form__label--options {
-  padding-left: 45px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 60px;
-  }
-}
-
 .form__label--radio {
   margin-bottom: 25px;
+  padding-left: 45px;
   color: @grey;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
+    padding-left: 60px;
   }
 }
 
 .form__label--check {
   color: @black;
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 //состояние ошибки
@@ -372,6 +374,7 @@
 
 .form__input::placeholder,
 .form__textarea::placeholder {
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -540,7 +543,6 @@
 .form__input:focus + .form__icon--fill {
   fill: @green;
   stroke: none;
-
 }
 //error
 .error + .form__icon {
@@ -550,4 +552,3 @@
 .error + .form__icon--fill {
   fill: @error;
 }
-
