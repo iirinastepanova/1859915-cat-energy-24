@@ -13,14 +13,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 62%;
-    max-width: 470px;
+    width: 440px;
+    padding-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 39%;
+    justify-content: flex-end;
+    min-width: 40%;
     max-width: 570px;
+    padding-top: 17px;
   }
 }
 
@@ -34,7 +35,7 @@
 .navigation__link {
   position: relative;
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   .padding-mobile;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
@@ -45,11 +46,12 @@
   border-top: 1px solid @concrete-light;
   text-decoration: none;
   text-transform: uppercase;
-  .hover-active-opacity;
+  .hov-act-focus-opacity;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
     padding-left: 0;
+    margin-right: 33px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -57,9 +59,27 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-right: 35px;
     font-size: 20px;
     line-height: 30px;
     color: @black;
+  }
+}
+
+.navigation__link:last-of-type {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @concrete-light;
+  }
+}
+
+.navigation__link:nth-of-type(3n) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-left: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -70,7 +90,7 @@
 }
 
 .navigation__link--current::after {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     top: 55px;
@@ -79,10 +99,16 @@
     height: 2px;
     background-color: @green;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 58px;
+  }
 }
 
 .header--main .navigation__link--current::after {
-  background-color: @white;
+  @media (min-width: @desktop-width) {
+    background-color: @white;
+  }
 }
 
 .navigation__toggle {
@@ -100,6 +126,7 @@
     background-color: @white;
     cursor: pointer;
     border: none;
+    .hov-act-focus-opacity;
 
     @media (min-width: @tablet-width) {
       display: none;

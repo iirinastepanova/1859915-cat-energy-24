@@ -6,9 +6,32 @@
   border: none;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus {
+    outline: 2px solid @grey-light;
+    outline-offset: -2px;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    opacity: 0.3;
+  }
 }
 
 .button--show-more {
   color: @grey-light;
   background-color: @concrete;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    opacity: 0.3;
+  }
 }

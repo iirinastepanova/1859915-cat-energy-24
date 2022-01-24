@@ -1,15 +1,20 @@
 .form {
   .padding-mobile;
+  padding-top: 29px;
   max-width: @max-width-mobile;
   .margin-auto;
 
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
-    .padding-tablet;
+    padding-top: 48px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: @max-width-desktop;
+    padding-bottom: 60px;
   }
 }
 
@@ -48,6 +53,7 @@
 
 //стили fieldset
 .form__group {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -56,64 +62,10 @@
   border: none;
 }
 
-.form__group--info {
-  margin-bottom: 24px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 72px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 69px;
-  }
-}
-
-.form__group--goal {
-  padding-top: 22px;
-  padding-bottom: 19px;
-  margin-bottom: 26px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 75px;
-    padding: 25px 28px 5px;
-    border: 1px solid #d9d9d9;
-  }
-}
-
-.form__group--contacts {
-  margin-bottom: 24px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 45px;
-  }
-}
-
-.form__group--comments {
-  margin-bottom: 23px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
-  }
-}
-
-.form__group--optional {
-  margin-bottom: 10px;
-
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 61px;
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, auto);
-  }
-}
-//заголовки fieldset
 .form__legend {
+  position: relative;
+  // width: 100%;
+  padding: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
@@ -123,35 +75,6 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-  }
-}
-
-.form__group--contacts .form__legend {
-  margin-bottom: 35px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-  }
-}
-
-.form__group--comments .form__legend {
-  margin-bottom: 38px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-  }
-}
-
-.form__group--optional .form__legend {
-  margin-bottom: 34px;
-}
-
-//обертка для перестроения блока с радиокнопками
-.form__group-wrapper {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
   }
 }
 
@@ -175,20 +98,247 @@
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+  }
+}
+
+.form__input {
+  flex-grow: 1;
+  display: block;
+  margin-left: 15px;
+  padding: 13px 15px 14px;
+  outline: 1px solid #e7e7e7;
+  border: none;
+  border-radius: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 17px 12px;
+    margin-left: 20px;
+  }
+
+  &:hover {
+    outline: 1px solid @silver;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid @grey-light;
+    outline-offset: -2px;
+  }
+}
+
+//инфо о питомце
+.form__group--info {
+  margin-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 9px;
+  }
+}
+//цель программы
+.form__group--goal {
+  padding-top: 28px;
+  padding-bottom: 0;
+  margin-bottom: 26px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 75px;
+    padding: 25px 28px 5px;
+    border: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+    padding: 28px 28px 6px;
+  }
+}
+
+//обертка для перестроения блока с целью программы
+.form__group-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+//контакты владельца
+.form__group--contacts {
+  margin-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 76px;
+  }
+}
+
+.form__group--contacts .form__legend {
+  width: 190px;
+  margin-bottom: 35px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-bottom: 76px;
+  }
+}
+//комментарии
+.form__group--comments {
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__group--comments .form__legend {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  padding: 19px 12px 9px 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @grey-light;
+  text-transform: uppercase;
+  outline: 1px solid #e7e7e7;
+  border: none;
+  border-radius: 0;
+
+  @media (min-width: @tablet-width) {
+    min-height: 171px;
+    padding-left: 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    outline: 1px solid @silver;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid @grey-light;
+    outline-offset: -2px;
+  }
+
+  &:focus-visible {
+    border-radius: 0;
+  }
+}
+
+//дополнительно
+.form__group--optional {
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, auto);
+    column-gap: 45px;
+    margin-bottom: 23px;
+  }
+}
+
+.form__group--optional .form__legend {
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
   }
 }
 
 .form__group--optional .form__label {
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 220px;
+  }
 }
+
+// .form__legend--decorate {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 9px;
+//     right: 0;
+//     z-index: -1;
+//     display: block;
+//     margin-right: -20px;
+//     width: 100%;
+//     height: 2px;
+//     background-color: @green;
+//   }
+// }
+
+.decorate {
+  // display: none;
+  position: absolute;
+  top: -71px;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-right: -20px;
+  background-color: @green;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
+}
+
 //form__label
 .form__label--field {
   display: flex;
   align-items: baseline;
 }
 
-.form__label--options {
+.form__label--radio {
+  margin-bottom: 25px;
+  padding-left: 45px;
+  color: @grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    padding-left: 60px;
+  }
+}
+
+.form__label--check {
+  color: @black;
   padding-left: 45px;
 
   @media (min-width: @tablet-width) {
@@ -196,31 +346,35 @@
   }
 }
 
-.form__label--radio {
-  color: @grey;
-}
+//состояние ошибки
+.error {
+  outline: 2px solid @error;
+  outline-offset: -2px;
 
-.form__label--check {
-  color: @black;
-}
-//form__input
-.form__input {
-  flex-grow: 1;
-  display: block;
-  margin-left: 12px;
-  padding: 13px 15px 14px;
-  border: 1px solid #e7e7e7;
-  border-radius: 0;
+  &:hover {
+    outline: 2px solid #ff8282a8;
+  }
+
+  &:focus {
+    outline: 2px solid #f84c4c;
+  }
 }
 
 .form__input-goal,
 .form__input-optional {
   position: relative;
-  display: none;
+  .visually-hidden;
+}
+
+.form__input-goal:focus + .form__control,
+.form__input-optional:focus + .form__control {
+  outline: 2px solid @grey-light;
+  outline-offset: -2px;
 }
 
 .form__input::placeholder,
 .form__textarea::placeholder {
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -248,18 +402,26 @@
   height: 30px;
   box-sizing: border-box;
   background-color: @white;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @silver;
+
+  &:hover {
+    border: 1px solid #bababa;
+  }
+
+  &:focus {
+    outline: 1px solid @grey-light;
+  }
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
   }
 }
-
+//модификация радио-кнопка
 .form__control--radio {
   border-radius: 50%;
 }
-
+//для радио-кнопки checked
 .form__control--radio::before {
   content: "";
   position: absolute;
@@ -269,7 +431,6 @@
   height: 14px;
   background-color: @green;
   border-radius: 50%;
-  border: 1px solid #cdcdcd;
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -281,7 +442,7 @@
 .form__input-goal:checked + .form__control--radio::before {
   display: block;
 }
-
+//для чекбокса checked
 .form__control--checkbox::before {
   content: "";
   position: absolute;
@@ -306,21 +467,24 @@
   display: block;
 }
 
-.form__textarea {
+//кнопка формы
+.form__button {
   width: 100%;
-  box-sizing: border-box;
-  padding: 9px 12px 9px 15px;
-  font-family: "Oswald", "Arial", sans-serif;
+  padding: 9px 20px;
+  margin-bottom: 22px;
   font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  color: @grey-light;
-  text-transform: uppercase;
-  border: 1px solid #e7e7e7;
-  border-radius: 0;
+  line-height: 20px;
+  text-align: center;
 
-  &:focus-visible {
-    border-radius: 0;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 98%;
+    padding: 16px 20px;
   }
 }
 
@@ -331,14 +495,7 @@
     column-gap: 61px;
   }
 }
-
-.form__button {
-  width: 100%;
-  padding: 7px 20px;
-  margin-bottom: 28px;
-  text-align: center;
-}
-
+//подсказка
 .form__tip {
   margin-top: 0;
   margin-bottom: 32px;
@@ -348,4 +505,50 @@
   font-weight: 400;
   text-align: center;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 17px;
+    margin-left: 10px;
+  }
+}
+//иконки в форме и их состояния
+.form__icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  fill: none;
+  stroke: @grey;
+
+  @media (min-width: @desktop-width) {
+    top: 17px;
+    right: 18px;
+  }
+}
+
+.form__icon--fill {
+  fill: @grey;
+  stroke: none;
+}
+//focus
+.form__input:focus + .form__icon {
+  stroke: @green;
+}
+
+.form__input:focus + .form__icon--fill {
+  fill: @green;
+  stroke: none;
+}
+//error
+.error + .form__icon {
+  stroke: @error;
+}
+
+.error + .form__icon--fill {
+  fill: @error;
 }

@@ -5,10 +5,11 @@
 
   @media (min-width: @tablet-width) {
     .padding-tablet;
+    margin-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 118px;
+    margin-top: 140px;
     margin-bottom: auto;
     padding-left: 0;
     padding-right: 0;
@@ -83,6 +84,17 @@
     width: 100%;
     height: 100%;
     background-color: rgba(104, 183, 56, 0.85);
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 59px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 78px 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 50% 55px;
+    }
   }
 }
 
@@ -98,7 +110,7 @@
   color: @white;
 
   @media (min-width: @tablet-width) {
-    margin-right: 124px;
+    margin-right: 94px;
     text-align: left;
   }
 

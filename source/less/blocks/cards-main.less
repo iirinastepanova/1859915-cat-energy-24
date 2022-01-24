@@ -3,23 +3,22 @@
   flex-direction: column;
   max-width: @max-width-mobile;
   .margin-auto;
-  .padding-mobile;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: minmax(1fr, 40%) minmax(1fr, 40%);
-    gap: 140px 60px;
+    gap: 141px 60px;
     max-width: @max-width-tablet;
     margin-bottom: 68px;
+    padding-top: 18px;
     .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 80px 60px;
-    margin-bottom: 75px;
+    gap: 143px 78px;
+    margin-bottom: 52px;
     padding-right: 110px;
     padding-left: 110px;
     max-width: @max-width-desktop;
@@ -29,12 +28,16 @@
 .cards-main__title {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 27px;
+  padding-top: 29px;
   padding-bottom: 41px;
+  .padding-mobile;
+  padding-right: 5px;
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
     grid-column: 1/3;
+    padding-left: 0;
+    padding-bottom: 23px;
     border-bottom: none;
   }
 
