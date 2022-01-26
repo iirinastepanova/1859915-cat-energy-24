@@ -105,6 +105,8 @@
 .form__input {
   flex-grow: 1;
   display: block;
+  min-width: 210px;
+  box-sizing: border-box;
   margin-left: 15px;
   padding: 13px 15px 14px;
   outline: 1px solid #e7e7e7;
@@ -112,6 +114,7 @@
   border-radius: 0;
 
   @media (min-width: @tablet-width) {
+    min-width: 350px;
     padding: 10px 17px 12px;
     margin-left: 20px;
   }
@@ -198,6 +201,10 @@
     margin-bottom: 76px;
   }
 }
+//место для иконки
+.form__label--icon .form__input {
+  padding-right: 45px;
+}
 //комментарии
 .form__group--comments {
   margin-bottom: 23px;
@@ -240,6 +247,7 @@
   outline: 1px solid #e7e7e7;
   border: none;
   border-radius: 0;
+  resize: vertical;
 
   @media (min-width: @tablet-width) {
     min-height: 171px;
@@ -375,10 +383,14 @@
     line-height: 30px;
   }
 }
-
+//удаление стрелок у input number в браузерах
 .form__input::-webkit-outer-spin-button,
 .form__input::-webkit-inner-spin-button {
   appearance: none;
+}
+//для firefox
+input[type="number"] {
+  appearance: textfield;
 }
 //кастомные инпуты
 .form__control {
