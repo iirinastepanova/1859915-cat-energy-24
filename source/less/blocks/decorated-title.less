@@ -1,0 +1,60 @@
+.decorated-title {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100vw;
+    margin-left: calc((103vw - 100%) / (-2));
+    height: 2px;
+    background-color: @green;
+  }
+}
+//Каталог
+.cards-optional.decorated-title::before {
+  top: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+//Меняется сетка на десктопе
+.cards-promo-wrapper.decorated-title::before {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    display: block;
+  }
+}
+//Для формы
+.form__group--contacts.decorated-title::before {
+  top: -72px;
+
+  @media (min-width: @tablet-width) {
+    top: -89px;
+  }
+}
+
+.form__group--comments.decorated-title::before {
+  top: -49px;
+
+  @media (min-width: @tablet-width) {
+    top: -89px;
+  }
+}
+
+.form__group--optional.decorated-title::before {
+  top: -50px;
+
+  @media (min-width: @tablet-width) {
+    top: -76px;
+  }
+}

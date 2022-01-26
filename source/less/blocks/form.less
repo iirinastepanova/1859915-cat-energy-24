@@ -184,11 +184,17 @@
 
 .form__group--contacts .form__legend {
   width: 190px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-left: -20px;
   margin-bottom: 35px;
   background-color: @white;
 
   @media (min-width: @tablet-width) {
     width: auto;
+    padding-left: 39px;
+    padding-right: 42px;
+    margin-left: -40px;
     margin-bottom: 76px;
   }
 }
@@ -206,9 +212,16 @@
 }
 
 .form__group--comments .form__legend {
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-left: -20px;
   margin-bottom: 38px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
+    padding-left: 38px;
+    padding-right: 39px;
+    margin-left: -38px;
     margin-bottom: 76px;
   }
 }
@@ -217,7 +230,7 @@
   width: 100%;
   min-height: 150px;
   box-sizing: border-box;
-  padding: 19px 12px 9px 15px;
+  padding: 10px 12px 9px 15px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -269,9 +282,16 @@
 }
 
 .form__group--optional .form__legend {
+  padding-left: 20px;
+  padding-right: 22px;
+  margin-left: -20px;
   margin-bottom: 39px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 41px;
+    margin-left: -41px;
     margin-bottom: 63px;
   }
 }
@@ -285,38 +305,6 @@
 
   @media (min-width: @desktop-width) {
     width: 220px;
-  }
-}
-
-// .form__legend--decorate {
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 9px;
-//     right: 0;
-//     z-index: -1;
-//     display: block;
-//     margin-right: -20px;
-//     width: 100%;
-//     height: 2px;
-//     background-color: @green;
-//   }
-// }
-
-.decorate {
-  // display: none;
-  position: absolute;
-  top: -71px;
-  right: 0;
-  z-index: -1;
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin-right: -20px;
-  background-color: @green;
-
-  @media (min-width: @tablet-width) {
-    left: 0;
   }
 }
 
@@ -551,4 +539,14 @@
 
 .error + .form__icon--fill {
   fill: @error;
+}
+//disabled for custom inputs
+.form__input-optional[disabled] + .form__control,
+.form__input-goal[disabled] + .form__control {
+  opacity: 0.3;
+}
+//disabled for labels
+.form__input-optional[disabled] ~ .form__label-styled,
+.form__input-goal[disabled] ~ .form__label-styled {
+  opacity: 0.3;
 }

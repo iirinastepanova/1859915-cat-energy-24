@@ -38,7 +38,7 @@ const html = () => {
 //Images
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh)
+  .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
@@ -83,7 +83,7 @@ const copy = (done) => {
     base: 'source'
   })
   .pipe(gulp.dest('build'))
-  done()
+  done();
 }
 
 //Clean

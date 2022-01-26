@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -83,22 +85,22 @@
             <label class="form__label form__label--radio">
               <input class="form__input-goal" type="radio" name="goal" value="weight-loss"checked>
               <span class="form__control form__control--radio"></span>
-              Похудение
+              <span class="form__label-styled">Похудение</span>
             </label>
             <label class="form__label form__label--radio">
               <input class="form__input-goal" type="radio" name="goal" value="weight-gain">
               <span class="form__control form__control--radio"></span>
-              Набор массы
+              <span class="form__label-styled">Набор массы</span>
             </label>
             <label class="form__label form__label--radio">
               <input class="form__input-goal" type="radio" name="goal" value="need-help">
               <span class="form__control form__control--radio"></span>
-              Не знаю (Нужен ваш совет)
+              <span class="form__label-styled">Не знаю (Нужен ваш совет)</span>
             </label>
           </fieldset>
         </div>
-        <fieldset class="form__group form__group--contacts">
-          <legend class="form__legend form__legend--decorate">Контактные данные (владельца кота)</legend><span class="decorate"></span>
+        <fieldset class="form__group form__group--contacts decorated-title">
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <label class="form__label form__label--field">
             E-mail:*
             <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -114,31 +116,31 @@
             </svg>
           </label>
         </fieldset>
-        <fieldset class="form__group form__group--comments">
-          <legend class="form__legend form__legend--decorate">Комментарий</legend>
-          <textarea class="form__textarea" name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="8"></textarea>
+        <fieldset class="form__group form__group--comments  decorated-title">
+          <legend class="form__legend">Комментарий</legend>
+          <textarea class="form__textarea" name="comments" placeholder="Расскажите обо всех повадках кота" cols="100" rows="5"></textarea>
         </fieldset>
-        <fieldset class="form__group form__group--optional">
-          <legend class="form__legend form__legend--decorate">Дополнительно</legend>
+        <fieldset class="form__group form__group--optional decorated-title">
+          <legend class="form__legend">Дополнительно</legend>
           <label class="form__label form__label--check">
             <input class="form__input-optional" type="checkbox" name="sweetener" checked>
             <span class="form__control form__control--checkbox"></span>
-            Сахарозаменитель
+            <span class="form__label-styled">Сахарозаменитель</span>
           </label>
           <label class="form__label form__label--check">
             <input class="form__input-optional" type="checkbox" name="water">
             <span class="form__control form__control--checkbox"></span>
-            Питьевая вода
+            <span class="form__label-styled">Питьевая вода</span>
           </label>
           <label class="form__label form__label--check">
             <input class="form__input-optional" type="checkbox" name="milk">
             <span class="form__control form__control--checkbox"></span>
-            Молоко
+            <span class="form__label-styled">Молоко</span>
           </label>
           <label class="form__label form__label--check">
-            <input class="form__input-optional" type="checkbox" name="vitamins">
+            <input class="form__input-optional" type="checkbox" name="vitamins" disabled>
             <span class="form__control form__control--checkbox"></span>
-            Витамины
+            <span class="form__label-styled">Витамины</span>
           </label>
         </fieldset>
         <div class="form__button-wrapper">
