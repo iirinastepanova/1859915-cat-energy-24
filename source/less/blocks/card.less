@@ -24,7 +24,7 @@
     width: 66%;
     min-width: 325px;
     max-width: 500px;
-    padding: 20px 37px 39px 37px;
+    padding: 161px 37px 39px 37px;
     .margin-auto;
     background-color: @concrete;
     border-bottom: none;
@@ -32,6 +32,7 @@
 
   @media (min-width: @desktop-width) {
     min-width: 245px;
+    padding-top: 162px;
     padding-left: 41px;
   }
 }
@@ -74,19 +75,15 @@
 .card--show-more .card__title {
   width: 210px;
   margin-bottom: 8px;
+  padding-top: 58px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 58px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     width: 135px;
-    margin-bottom: 23px;
-    padding-top: 138px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 142px;
+    padding-top: 0;
+    margin-bottom: 22px;
   }
 }
 
@@ -107,9 +104,14 @@
   }
 }
 
-.card__link {
+.card__link-wrapper {
   grid-area: link;
-  color: @black;
+  display: block;
+  width: auto;
+}
+
+.card__link {
+  display: block;
   text-decoration: none;
   .hov-act-focus-opacity;
 }
@@ -123,10 +125,6 @@
   position: absolute;
   display: block;
   margin: auto;
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-  }
 }
 
 .card__image--small {
@@ -136,14 +134,14 @@
   right: 0;
 
   @media (min-width: @tablet-width) {
-    top: -67px;
+    top: auto;
+    bottom: 36px;
     width: 161px;
     height: 172px;
-    margin-bottom: -32px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -72px;
+    bottom: 41px;
   }
 }
 
@@ -154,14 +152,14 @@
   right: 0;
 
   @media (min-width: @tablet-width) {
-    top: -88px;
+    top: auto;
+    bottom: 33px;
     width: 168px;
     height: 200px;
-    margin-bottom: -58px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -100px;
+    bottom: 43px;
   }
 }
 
@@ -173,6 +171,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  color: @black;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -250,4 +249,5 @@
 .card__button {
   grid-area: button;
   padding: 8px 20px;
+  margin-top: auto;
 }

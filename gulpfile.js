@@ -6,6 +6,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
@@ -33,6 +34,13 @@ const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
+}
+
+//Scripts
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
 }
 
 //Images
@@ -115,6 +123,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/js/script.js', gulp.series(scripts));
 }
 
 //Build
@@ -125,6 +134,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svg,
     sprite,
     createWebP
@@ -139,6 +149,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svg,
     sprite,
     createWebP

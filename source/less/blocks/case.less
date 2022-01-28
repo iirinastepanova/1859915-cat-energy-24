@@ -254,6 +254,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 611px;
     margin-top: -45px;
   }
 }
@@ -265,13 +266,14 @@
   background-color: @concrete-dark;
 
   @media (min-width: @tablet-width) {
+    left: 56px;
     background-color: transparent;
-    width: 50%;
-    left: 0;
+    width: 42%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    left: 24px;
+    width: 48%;
   }
 }
 
@@ -286,12 +288,17 @@
     right: 50px;
     width: 43%;
   }
+
+  @media (min-width: @desktop-width) {
+    right: 1px;
+    width: 48%;
+  }
 }
 
 .case__image--before {
   @media (min-width: @tablet-width) {
-    width: 677px;
-    height: 520px;
+    width: 650px;
+    height: 500px;
   }
 }
 
@@ -299,7 +306,7 @@
   width: 240px;
 
   @media (min-width: @tablet-width) {
-    width: 545px;
+    width: 537px;
     height: auto;
   }
 
@@ -361,7 +368,7 @@
     background-image: url("../img/square.svg");
     opacity: 0.24;
   }
-
+  //состояния для кнопки и линии
   &:hover {
     &::after {
       background-image: none;
@@ -371,7 +378,10 @@
   }
 
   &:focus {
-    opacity: 0.3;
+    &::after {
+      background-image: none;
+      background-color: @green;
+    }
   }
 
   &:active {

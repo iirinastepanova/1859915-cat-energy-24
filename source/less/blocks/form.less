@@ -105,7 +105,7 @@
 .form__input {
   flex-grow: 1;
   display: block;
-  min-width: 210px;
+  min-width: 170px;
   box-sizing: border-box;
   margin-left: 15px;
   padding: 13px 15px 14px;
@@ -343,7 +343,7 @@
 }
 
 //состояние ошибки
-.error {
+.form__input--invalid {
   outline: 2px solid @error;
   outline-offset: -2px;
 
@@ -544,12 +544,12 @@ input[type="number"] {
   fill: @green;
   stroke: none;
 }
-//error
-.error + .form__icon {
+//invalid input
+.form__input--invalid + .form__icon {
   stroke: @error;
 }
 
-.error + .form__icon--fill {
+.form__input--invalid + .form__icon--fill {
   fill: @error;
 }
 //disabled for custom inputs
